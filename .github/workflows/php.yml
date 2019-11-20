@@ -1,4 +1,4 @@
-name: Test docker project setup
+name: Project setup
 
 on: [push]
 

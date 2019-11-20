@@ -1,0 +1,20 @@
+name: Test docker project setup
+
+on: [push]
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+            -   uses: actions/checkout@master
+            -   uses: actions/checkout@v1
+                with:
+                    repository: shopware/platform
+                    ref: refs/heads/master
+            -   name: start setup proccess
+                run: php ./psh.phar docker:start
+
+            -   name: docker init
+                run: php ./psh.phar docker:init-data

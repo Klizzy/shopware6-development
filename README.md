@@ -24,7 +24,7 @@ After that you should be able to setup Shopware like below described.
 You can almost follow the docker setup from the official documentation: https://docs.shopware.com/en/shopware-platform-dev-en/getting-started/installation-guide#preparation. Just note the following two changes.
 1. Replace the repository from the first git clone command with this one here.
 	-  ~~git clone git@github.com:shopware/development.git~~ 
-	- git clone git@github.com:buenosdiaz/shopware6-development 
+	- git clone git@github.com:klizzy/shopware6-development 
 2. After `./psh.phar docker:start` run also the command `./psh.phar docker:init-data`
 
 Thats it.
@@ -38,5 +38,5 @@ In order to avoid performance issues we use a data container instead of local vo
 host:127.0.0.1
 port:2222
 user:root
-password:nexus123
+password:shopware
 ```

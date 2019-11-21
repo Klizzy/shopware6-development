@@ -18,3 +18,5 @@ jobs:
 
             -   name: docker init
                 run: php ./psh.phar docker:init-data
+            -   name: Test ssh docker command
+                run: php ./psh.phar docker:ssh

@@ -18,5 +18,7 @@ jobs:
 
             -   name: docker init
                 run: php ./psh.phar docker:init-data
+            -   name: Install dependencies
+                run: docker exec  shopware6-development_app_server_1 php psh.phar install
             -   name: Run tests
-                run: docker exec -i shopware6-development_app_server_1 php psh.phar unit
+                run: docker exec  shopware6-development_app_server_1 php psh.phar unit
